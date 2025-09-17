@@ -8,6 +8,10 @@ package com.bank.model;
 	        super(montant);
 	        this.source = source;
 	    }
+	    @Override
+	    public String getType() {
+	        return "Versement";
+	    }
 
 	    public String getSource() { return source; }
 	}

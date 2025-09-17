@@ -149,5 +149,15 @@ public class ConsoleUI {
     	    System.out.println("Solde du compte " + numero + " : " + compte.getSolde() + " €");
     	
     }
-    private void consulterOperations() { /*...*/ }
+    private void consulterOperations() { 
+    	
+    	 System.out.print("Numéro du compte : ");
+    	    String numero = sc.nextLine();
+
+    	    Compte compte = comptes.get(numero);
+    	    if (compte == null) {
+    	        System.out.println("Compte introuvable !");
+    	        return;
+    	    }
+    }
 }

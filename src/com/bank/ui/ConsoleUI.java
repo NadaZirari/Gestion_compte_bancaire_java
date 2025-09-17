@@ -60,7 +60,30 @@ public class ConsoleUI {
     	    comptes.put(numero, compte);
     	    System.out.println("Compte créé avec succès !");
     }
-    private void faireVersement() { /*...*/ }
+    private void faireVersement() {
+    	 System.out.print("Numéro du compte : ");
+    	    String numero = sc.nextLine();
+
+    	    Compte compte = comptes.get(numero);
+    	    if (compte == null) {
+    	        System.out.println("Compte introuvable !");
+    	        return;
+    	    }
+
+    	    System.out.print("Montant à verser : ");
+    	    double montant = sc.nextDouble();
+    	    sc.nextLine();
+    	    try {
+    	        compte.verser(montant, "Versement espèces");
+    	        System.out.println("Versement effectué avec succès !");
+    	    } catch (Exception e) {
+    	        System.out.println("Erreur : " + e.getMessage());
+    	    }
+    
+    
+    }
+    
+    
     private void faireRetrait() { /*...*/ }
     private void faireVirement() { /*...*/ }
     private void consulterSolde() { /*...*/ }

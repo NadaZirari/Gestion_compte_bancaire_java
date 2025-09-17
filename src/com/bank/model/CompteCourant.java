@@ -7,7 +7,9 @@ public class CompteCourant extends Compte {
 	        super(code, solde);
 	        this.decouvert = decouvert;
 	    }
-
+	    public CompteCourant(String code, double soldeInitial) {
+	        super(code, soldeInitial);
+	    }
 	    
 	    @Override
 	    public void retirer(double montant) throws Exception {

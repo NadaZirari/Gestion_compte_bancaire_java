@@ -17,7 +17,7 @@ Projet Java console pour gérer des comptes bancaires, incluant :
 - `com.bank.util` : classes utilitaires
 
 ## Comment exécuter
-1. Cloner le projet : `git clone <URL_DU_REPO>`
+1. Cloner le projet : `git clone https://github.com/NadaZirari/Gestion_compte_bancaire_java.git `
 2. Ouvrir dans Eclipse
 3. Exécuter la classe `Main.java`
 

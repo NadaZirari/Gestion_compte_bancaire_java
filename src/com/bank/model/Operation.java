@@ -1,6 +1,7 @@
 package com.bank.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 public abstract class Operation {
@@ -19,4 +20,15 @@ public abstract class Operation {
     public String getNumero() { return numero; }
     public LocalDateTime getDate() { return date; }
     public double getMontant() { return montant; }
+    
+    
+    public abstract String getType();
+
+    @Override
+    public String toString() {
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return date.format(fmt) + " - " + getType() + " : " + montant + " €";
+    }
 }
+    
+

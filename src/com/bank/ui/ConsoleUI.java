@@ -159,5 +159,14 @@ public class ConsoleUI {
     	        System.out.println("Compte introuvable !");
     	        return;
     	    }
+    	    System.out.println("Opérations du compte " + numero + " :");
+    	    if (compte.getListeOperations().isEmpty()) {
+    	        System.out.println("Aucune opération enregistrée.");
+    	    } else {
+    	        compte.getListeOperations().forEach(op ->
+    	            System.out.println(op)
+    	        );
+    	    }
+    	}
     }
-}
+

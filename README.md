@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# Gestion_compte_bancaire_java
-=======
+
 # Gestion de comptes bancaires en Java
 
 Projet Java console pour gérer des comptes bancaires, incluant :
@@ -26,4 +24,4 @@ Projet Java console pour gérer des comptes bancaires, incluant :
 
 ## Auteur
 Nada Zirari
->>>>>>> 173db160eea68ea3cce437085fb7d72ec519a16f
+

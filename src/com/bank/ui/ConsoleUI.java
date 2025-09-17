@@ -125,6 +125,13 @@ public class ConsoleUI {
     	    double montant = sc.nextDouble();
     	    sc.nextLine();
     	
+    	    try {
+    	        compteSource.retirer(montant);
+    	        compteDest.verser(montant, "Virement de " + source);
+    	        System.out.println("Virement effectué avec succès !");
+    	    } catch (Exception e) {
+    	        System.out.println("Erreur : " + e.getMessage());
+    	    }
     	
     }
     private void consulterSolde() { /*...*/ }

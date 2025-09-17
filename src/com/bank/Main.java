@@ -1,10 +1,10 @@
 package com.bank;
-
+import com.bank.ui.ConsoleUI;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Bonjour, bienvenue dans l'application bancaire Nada !");
-		
+		 ConsoleUI ui = new ConsoleUI();
+	        ui.demarrer();
 		
 		
 		

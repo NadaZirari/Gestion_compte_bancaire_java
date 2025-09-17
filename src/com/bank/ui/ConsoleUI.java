@@ -106,7 +106,27 @@ public class ConsoleUI {
     	        System.out.println("Erreur : " + e.getMessage());
     	    }
     }
-    private void faireVirement() { /*...*/ }
+    private void faireVirement() { 
+    	
+    	 System.out.print("Numéro du compte source : ");
+    	    String source = sc.nextLine();
+    	    System.out.print("Numéro du compte destination : ");
+    	    String dest = sc.nextLine();
+
+    	    Compte compteSource = comptes.get(source);
+    	    Compte compteDest = comptes.get(dest);
+
+    	    if (compteSource == null || compteDest == null) {
+    	        System.out.println("Un des comptes n'existe pas !");
+    	        return;
+    	    }
+
+    	    System.out.print("Montant à virer : ");
+    	    double montant = sc.nextDouble();
+    	    sc.nextLine();
+    	
+    	
+    }
     private void consulterSolde() { /*...*/ }
     private void consulterOperations() { /*...*/ }
 }

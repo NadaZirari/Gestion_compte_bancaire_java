@@ -50,7 +50,7 @@ public class ConsoleUI {
         return valeur;
     }
 
-    // Implémente ensuite les méthodes :
+    
     private void creerCompte() { 
     	 System.out.print("Nom du titulaire : ");
     	    String nom = sc.nextLine();
@@ -84,7 +84,28 @@ public class ConsoleUI {
     }
     
     
-    private void faireRetrait() { /*...*/ }
+    private void faireRetrait() { 
+    	
+    	 System.out.print("Numéro du compte : ");
+    	    String numero = sc.nextLine();
+
+    	    Compte compte = comptes.get(numero);
+    	    if (compte == null) {
+    	        System.out.println("Compte introuvable !");
+    	        return;
+    	    }
+
+    	    System.out.print("Montant à retirer : ");
+    	    double montant = sc.nextDouble();
+    	    sc.nextLine();
+    	
+    	    try {
+    	        compte.retirer(montant);
+    	        System.out.println("Retrait effectué avec succès !");
+    	    } catch (Exception e) {
+    	        System.out.println("Erreur : " + e.getMessage());
+    	    }
+    }
     private void faireVirement() { /*...*/ }
     private void consulterSolde() { /*...*/ }
     private void consulterOperations() { /*...*/ }

@@ -51,15 +51,54 @@ public class ConsoleUI {
     }
 
     
-    private void creerCompte() { 
+   /* private void creerCompte() { 
     	 System.out.print("Nom du titulaire : ");
     	    String nom = sc.nextLine();
     	    System.out.print("Numéro du compte : ");
     	    String numero = sc.nextLine();
-    	    Compte compte = new CompteCourant(numero, 0.0); // ✅
+    	    Compte compte = new CompteCourant(numero, 0.0); 
     	    comptes.put(numero, compte);
     	    System.out.println("Compte créé avec succès !");
     }
+    */
+    private void creerCompte() {
+        System.out.print("Nom du titulaire : ");
+        String nom = sc.nextLine();
+
+        String numero;
+        do {
+            System.out.print("Numéro du compte (format CPT-12345) : ");
+            numero = sc.nextLine();
+            if (!Utils.codeCompteValide(numero)) {
+                System.out.println("Format invalide !");
+            }
+        } while (!Utils.codeCompteValide(numero));
+
+        // Choix du type de compte
+        int type;
+        do {
+            System.out.print("Type de compte (1 = Courant, 2 = Épargne) : ");
+            while (!sc.hasNextInt()) {
+                System.out.println("Entrée invalide !");
+                sc.next();
+                System.out.print("Type de compte (1 = Courant, 2 = Épargne) : ");
+            }
+            type = sc.nextInt();
+            sc.nextLine(); // consommer le retour chariot
+        } while (type != 1 && type != 2);
+
+        // Création du compte selon le type choisi
+        Compte compte;
+        if (type == 1) {
+            compte = new CompteCourant(numero, 0.0);
+        } else {
+            compte = new CompteEpargne(numero, 0.0);
+        }
+
+        comptes.put(numero, compte);
+        System.out.println("Compte créé avec succès !");
+    }
+    
     private void faireVersement() {
     	 System.out.print("Numéro du compte : ");
     	    String numero = sc.nextLine();

@@ -8,6 +8,12 @@ public class CompteEpargne extends Compte {
         this.tauxInteret = tauxInteret;
     }
 
+    // Surcharge avec taux par défaut (3%)
+    public CompteEpargne(String code, double solde) {
+        this(code, solde, 3.0); // Appel du constructeur ci-dessus
+    }
+    
+
     @Override
     public void retirer(double montant) throws Exception {
         if (montant <= 0) throw new Exception("Montant doit être positif");

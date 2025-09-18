@@ -3,7 +3,7 @@ package com.bank.model;
 import java.util.ArrayList;
 
 public abstract class Compte {
-	 protected String code;
+	    protected String code;
 	    protected double solde;
 	    protected ArrayList<Operation> listeOperations;
 

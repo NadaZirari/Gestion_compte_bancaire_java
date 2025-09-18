@@ -11,6 +11,7 @@ Projet Java console pour gérer des comptes bancaires, incluant :
 ## Technologies utilisées
 - Java 8+
 - Git / GitHub
+- Eclipse 
 
 ## Structure du projet
 - `com.bank.model` : classes `Compte`, `CompteCourant`, `Operation`, `Versement`, `Retrait`

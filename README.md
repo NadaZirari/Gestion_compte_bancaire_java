@@ -24,6 +24,11 @@ Projet Java console pour gérer des comptes bancaires, incluant :
 1. Cloner le projet : `git clone https://github.com/NadaZirari/Gestion_compte_bancaire_java.git `
 2. Ouvrir dans Eclipse
 3. Exécuter la classe `Main.java`
+
+## Class Diagram
+
+<img width="544" height="321" alt="classdiagramjava" src="https://github.com/user-attachments/assets/dd643618-d949-4e02-b044-589bc512a44f" />
+
 ## Screenshots
 
 <img width="580" height="202" alt="screen app java" src="https://github.com/user-attachments/assets/62167b78-a130-4d15-9745-02a83d27d00c" />

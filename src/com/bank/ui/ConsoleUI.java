@@ -71,7 +71,7 @@ public class ConsoleUI {
 
         String numero;
         do {
-            System.out.print("Numéro du compte (format CPT-12345) : ");
+            System.out.print("Entrer le code du compte (format CPT-12345) : ");
             numero = sc.nextLine();
             if (!Utils.codeCompteValide(numero)) {
                 System.out.println("Format invalide !");
@@ -104,7 +104,7 @@ public class ConsoleUI {
     }
     
     private void faireVersement() {
-    	 System.out.print("Numéro du compte : ");
+    	 System.out.print("Code du compte : ");
     	    String numero = sc.nextLine();
 
     	    Compte compte = comptes.get(numero);
@@ -129,7 +129,7 @@ public class ConsoleUI {
     
     private void faireRetrait() { 
     	
-    	 System.out.print("Numéro du compte : ");
+    	 System.out.print("Code du compte : ");
     	    String numero = sc.nextLine();
 
     	    Compte compte = comptes.get(numero);
@@ -151,9 +151,9 @@ public class ConsoleUI {
     }
     private void faireVirement() { 
     	
-    	 System.out.print("Numéro du compte source : ");
+    	 System.out.print("Code du compte source : ");
     	    String source = sc.nextLine();
-    	    System.out.print("Numéro du compte destination : ");
+    	    System.out.print("Code du compte destination : ");
     	    String dest = sc.nextLine();
 
     	    Compte compteSource = comptes.get(source);
@@ -180,7 +180,7 @@ public class ConsoleUI {
     private void consulterSolde() {
     	
     	
-    	 System.out.print("Numéro du compte : ");
+    	 System.out.print("Code du compte : ");
     	    String numero = sc.nextLine();
 
     	    Compte compte = comptes.get(numero);
@@ -194,7 +194,7 @@ public class ConsoleUI {
     }
     private void consulterOperations() { 
     	
-    	 System.out.print("Numéro du compte : ");
+    	 System.out.print("Code du compte : ");
     	    String numero = sc.nextLine();
 
     	    Compte compte = comptes.get(numero);

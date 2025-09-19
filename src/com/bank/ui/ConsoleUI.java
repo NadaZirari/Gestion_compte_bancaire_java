@@ -12,8 +12,12 @@ public class ConsoleUI {
     public void demarrer() {
         boolean exit = false;
         while (!exit) {
+        	
+        	
             afficherMenu();
+            
             int choix = lireEntier("Choix : ");
+            
             switch (choix) {
                 case 1: creerCompte(); break;
                 case 2: faireVersement(); break;
@@ -21,7 +25,7 @@ public class ConsoleUI {
                 case 4: faireVirement(); break;
                 case 5: consulterSolde(); break;
                 case 6: consulterOperations(); break;
-                case 7: exit = true; System.out.println("Au revoir !"); break;
+                case 7: exit = true; System.out.println("Au revoir :) !"); break;
                 default: System.out.println("Choix invalide"); break;
             }
         }

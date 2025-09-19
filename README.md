@@ -1,5 +1,7 @@
 
 # Gestion de comptes bancaires en Java
+Une application console développée en Java qui simule un système bancaire simple.
+Le projet est basé sur les principes de la Programmation Orientée Objet (POO) et est structuré en différentes couches afin de garantir la clarté, la modularité et la maintenabilité du code.
 
 Projet Java console pour gérer des comptes bancaires, incluant :
 - Création de comptes
@@ -11,7 +13,7 @@ Projet Java console pour gérer des comptes bancaires, incluant :
 ## Technologies utilisées
 - Java 8+
 - Git / GitHub
-- Eclipse 
+- Eclipse IDE
 
 ## Structure du projet
 - `com.bank.model` : classes `Compte`, `CompteCourant`, `Operation`, `Versement`, `Retrait`

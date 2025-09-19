@@ -33,6 +33,10 @@ Projet Java console pour gérer des comptes bancaires, incluant :
 
 <img width="580" height="202" alt="screen app java" src="https://github.com/user-attachments/assets/62167b78-a130-4d15-9745-02a83d27d00c" />
 
+##lien JIRA
+
+https://zirarinada20.atlassian.net/jira/software/c/projects/BRF/boards/4
+
 ## Auteur
 Nada Zirari
 
